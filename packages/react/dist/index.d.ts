@@ -2,7 +2,6 @@ import * as _stitches_react_types_styled_component from '@stitches/react/types/s
 import * as _stitches_react_types_css_util from '@stitches/react/types/css-util';
 import { ComponentProps } from 'react';
 
-type ButtonProps = ComponentProps<typeof Button>;
 declare const Button: _stitches_react_types_styled_component.StyledComponent<"button", {
     size?: "big" | "small" | undefined;
 }, {}, _stitches_react_types_css_util.CSS<{}, {
@@ -207,5 +206,6 @@ declare const Button: _stitches_react_types_styled_component.StyledComponent<"bu
     transition: "transitions";
     zIndex: "zIndices";
 }, {}>>;
+type ButtonProps = ComponentProps<typeof Button>;
 
 export { Button, ButtonProps };
