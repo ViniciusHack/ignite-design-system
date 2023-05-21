@@ -61,6 +61,7 @@ __export(src_exports, {
   Button: () => Button,
   Heading: () => Heading,
   Text: () => Text,
+  TextArea: () => TextArea,
   TextInput: () => TextInput
 });
 module.exports = __toCommonJS(src_exports);
@@ -339,6 +340,32 @@ var Text = (0, import_react4.styled)("p", {
   }
 });
 
+// src/components/TextArea.tsx
+var TextArea = styled2("textarea", {
+  backgroundColor: "$gray900",
+  padding: "$3 $4",
+  boxSizing: "border-box",
+  borderRadius: "$sm",
+  border: "2px solid $gray900",
+  fontFamily: "$default",
+  fontSize: "$sm",
+  color: "$white",
+  fontWeight: "regular",
+  resize: "vertical",
+  minHeight: 80,
+  "&:focus": {
+    borderColor: "$ignite300",
+    outline: 0
+  },
+  "&:disabled": {
+    opacity: 0.5,
+    cursor: "not-allowed"
+  },
+  "&:placeholder": {
+    color: "$gray400"
+  }
+});
+
 // src/components/TextInput/styles.ts
 var TextInputContainer = styled2("div", {
   backgroundColor: "$gray900",
@@ -397,5 +424,6 @@ function TextInput(_a) {
   Button,
   Heading,
   Text,
+  TextArea,
   TextInput
 });
