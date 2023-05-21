@@ -1,6 +1,4 @@
 var __defProp = Object.defineProperty;
-var __defProps = Object.defineProperties;
-var __getOwnPropDescs = Object.getOwnPropertyDescriptors;
 var __getOwnPropSymbols = Object.getOwnPropertySymbols;
 var __hasOwnProp = Object.prototype.hasOwnProperty;
 var __propIsEnum = Object.prototype.propertyIsEnumerable;
@@ -16,7 +14,48 @@ var __spreadValues = (a, b) => {
     }
   return a;
 };
-var __spreadProps = (a, b) => __defProps(a, __getOwnPropDescs(b));
+
+// src/components/Avatar/index.tsx
+import { User } from "phosphor-react";
+
+// src/components/Avatar/styles.ts
+import * as Avatar from "@radix-ui/react-avatar";
+import { styled } from "@stitches/react";
+var AvatarContainer = styled(Avatar.Root, {
+  display: "inline-block",
+  borderRadius: "$full",
+  width: "$12",
+  height: "$12",
+  overflow: "hidden"
+});
+var AvatarImage = styled(Avatar.Image, {
+  width: "100%",
+  height: "100%",
+  objectFit: "cover",
+  borderRadius: "inherit"
+});
+var AvatarFallback = styled(Avatar.Fallback, {
+  width: "100%",
+  height: "100%",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  backgroundColor: "$gray600",
+  color: "$gray800",
+  svg: {
+    width: "$6",
+    height: "$6"
+  }
+});
+
+// src/components/Avatar/index.tsx
+import { jsx, jsxs } from "react/jsx-runtime";
+function Avatar2(props) {
+  return /* @__PURE__ */ jsxs(AvatarContainer, { children: [
+    /* @__PURE__ */ jsx(AvatarImage, __spreadValues({}, props)),
+    /* @__PURE__ */ jsx(AvatarFallback, { delayMs: 600, children: /* @__PURE__ */ jsx(User, {}) })
+  ] });
+}
 
 // ../tokens/dist/index.mjs
 var colors = {
@@ -94,7 +133,7 @@ var space = {
 // src/styles/index.ts
 import { createStitches, defaultThemeMap } from "@stitches/react";
 var {
-  styled,
+  styled: styled2,
   css,
   globalCss,
   theme,
@@ -110,38 +149,126 @@ var {
     fonts,
     lineHeights,
     radii,
-    space
+    space,
+    sizes: space
   },
-  themeMap: __spreadProps(__spreadValues({}, defaultThemeMap), {
-    height: "space",
-    width: "space"
-  })
+  themeMap: __spreadValues({}, defaultThemeMap)
 });
 
-// src/index.tsx
-var Button = styled("button", {
-  fontFamily: "$default",
-  backgroundColor: "$ignite300",
+// src/components/Box.tsx
+var Box = styled2("div", {
+  padding: "$4",
+  borderRadius: `$md`,
+  backgroundColor: "$gray800",
+  border: "1px solid $gray600"
+});
+
+// src/components/Button.tsx
+var Button = styled2("button", {
+  all: "unset",
   borderRadius: "$sm",
-  border: 0,
-  fontWeight: "$bold",
-  color: "$white",
+  fontSize: "$sm",
+  fontWeight: "$medium",
+  fontFamily: "$default",
+  minWidth: 120,
+  boxSizing: "border-box",
+  textAlign: "center",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  gap: "$2",
+  padding: "0 $4",
+  cursor: "pointer",
+  svg: {
+    width: "$4",
+    height: "$4"
+  },
   variants: {
-    size: {
-      small: {
-        fontSize: 14,
-        padding: "$2 $4"
+    variant: {
+      primary: {
+        color: "$white",
+        background: "$ignite500"
       },
-      big: {
-        fontSize: 16,
-        padding: "$3 $6"
+      secondary: {
+        color: "$ignite300",
+        border: "2px solid $ignite500"
+      },
+      tertiary: {
+        color: "$gray100",
+        border: "0"
+      }
+    },
+    size: {
+      sm: {
+        height: 38
+      },
+      md: {
+        height: 44
       }
     }
   },
   defaultVariants: {
-    size: "small"
+    variant: "primary",
+    size: "md"
+  }
+});
+
+// src/components/Heading.tsx
+import { styled as styled3 } from "@stitches/react";
+var Heading = styled3("h2", {
+  fontFamily: "$default",
+  lineHeight: "$short",
+  margin: 0,
+  color: "$gray100",
+  variants: {
+    size: {
+      sm: { fontSize: "$xl" },
+      md: { fontSize: "$2xl" },
+      lg: { fontSize: "$4xl" },
+      "2xl": { fontSize: "$5xl" },
+      "3xl": { fontSize: "$6xl" },
+      "4xl": { fontSize: "$7xl" },
+      "5xl": { fontSize: "$8xl" },
+      "6xl": { fontSize: "$9xl" }
+    }
+  },
+  defaultVariants: {
+    size: "md"
+  }
+});
+
+// src/components/Text.tsx
+import { styled as styled4 } from "@stitches/react";
+var Text = styled4("p", {
+  fontFamily: "$default",
+  lineHeight: "$base",
+  margin: 0,
+  color: "$gray100",
+  variants: {
+    size: {
+      xxs: { fontSize: "$xxs" },
+      xs: { fontSize: "$xs" },
+      sm: { fontSize: "$sm" },
+      md: { fontSize: "$md" },
+      lg: { fontSize: "$lg" },
+      xl: { fontSize: "$xl" },
+      "2xl": { fontSize: "$2xl" },
+      "4xl": { fontSize: "$4xl" },
+      "5xl": { fontSize: "$5xl" },
+      "6xl": { fontSize: "$6xl" },
+      "7xl": { fontSize: "$7xl" },
+      "8xl": { fontSize: "$8xl" },
+      "9xl": { fontSize: "$9xl" }
+    }
+  },
+  defaultVariants: {
+    size: "md"
   }
 });
 export {
-  Button
+  Avatar2 as Avatar,
+  Box,
+  Button,
+  Heading,
+  Text
 };

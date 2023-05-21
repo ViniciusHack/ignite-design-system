@@ -13,6 +13,20 @@ export const Primary:StoryObj<ButtonProps> = {}
 
 export const Secondary:StoryObj<ButtonProps> = {
   args: {
-    variant: "secondary"
+    variant: "secondary",
+    children: "Create new"
+  }
+}
+
+export const Tertiary:StoryObj<ButtonProps> = {
+  args: {
+    variant: "tertiary",
+    children: "Cancel"
+  }
+}
+
+export const Small:StoryObj<ButtonProps> = {
+  args: {
+    size: "sm",
   }
 }
