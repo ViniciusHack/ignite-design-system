@@ -30,3 +30,9 @@ export const Small:StoryObj<ButtonProps> = {
     size: "sm",
   }
 }
+
+export const Disabled:StoryObj<ButtonProps> = {
+  args: {
+    disabled: true
+  }
+}

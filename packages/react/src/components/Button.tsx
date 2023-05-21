@@ -24,19 +24,49 @@ export const Button = styled('button', {
     height: '$4',
   },
 
+  '&[disabled]': {
+    cursor: 'not-allowed',
+  },
+
   variants: {
     variant: {
       primary: {
         color: '$white',
         background: '$ignite500',
+
+        '&:not[disabled]:hover': {
+          background: '$ignite300',
+        },
+
+        '&[disabled]': {
+          background: '$gray200',
+        },
       },
       secondary: {
         color: '$ignite300',
         border: '2px solid $ignite500',
+
+        '&:not[disabled]:hover': {
+          background: '$ignite500',
+          color: '$white',
+        },
+
+        '&[disabled]': {
+          color: '$gray200',
+          borderColor: '$gray200',
+        },
       },
       tertiary: {
         color: '$gray100',
         border: '0',
+
+        '&:not[disabled]:hover': {
+          color: '$white',
+        },
+
+        '&[disabled]': {
+          color: '$gray600',
+        },
       },
     },
 
