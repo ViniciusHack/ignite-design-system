@@ -7,7 +7,19 @@ export default {
   args: {
     src: "https://github.com/ViniciusHack.png",
     alt: "Vinicius Hack",
-  }
+  },
+  argTypes: {
+    src: {
+      control: {
+        type: "text"
+      },
+    },
+    alt: {
+      control: {
+        type: "text"
+      }
+    },
+    },
 } as Meta<AvatarProps>
 
 export const Primary:StoryObj<AvatarProps> ={}
