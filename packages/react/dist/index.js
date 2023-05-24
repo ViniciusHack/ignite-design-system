@@ -112,6 +112,7 @@ function Avatar2(props) {
     /* @__PURE__ */ (0, import_jsx_runtime.jsx)(AvatarFallback, { delayMs: 600, children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(import_phosphor_react.User, {}) })
   ] });
 }
+Avatar2.displayName = "Avatar";
 
 // ../tokens/dist/index.mjs
 var colors = {
@@ -218,6 +219,7 @@ var Box = styled2("div", {
   backgroundColor: "$gray800",
   border: "1px solid $gray600"
 });
+Box.displayName = "Box";
 
 // src/components/Button.tsx
 var Button = styled2("button", {
@@ -291,6 +293,7 @@ var Button = styled2("button", {
     size: "md"
   }
 });
+Button.displayName = "Button";
 
 // src/components/Checkbox/index.tsx
 var import_phosphor_react2 = require("phosphor-react");
@@ -351,6 +354,7 @@ var import_jsx_runtime2 = require("react/jsx-runtime");
 function Checkbox2(props) {
   return /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(CheckboxContainer, __spreadProps(__spreadValues({}, props), { children: /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(CheckboxIndicator, { asChild: true, children: /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(import_phosphor_react2.Check, { weight: "bold" }) }) }));
 }
+Checkbox2.displayName = "Checkbox";
 
 // src/components/Heading.tsx
 var import_react3 = require("@stitches/react");
@@ -375,6 +379,7 @@ var Heading = (0, import_react3.styled)("h2", {
     size: "md"
   }
 });
+Heading.displayName = "Heading";
 
 // src/components/Text.tsx
 var import_react4 = require("@stitches/react");
@@ -404,6 +409,7 @@ var Text = (0, import_react4.styled)("p", {
     size: "md"
   }
 });
+Text.displayName = "Text";
 
 // src/components/MultiStep/styles.ts
 var MultiStepContainer = styled2("div", {});
@@ -447,6 +453,7 @@ function MultiStep({ size, currentStep = 1 }) {
     }).map((step) => /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(Step, { active: currentStep >= step }, step)) })
   ] });
 }
+MultiStep.displayName = "MultiStep";
 
 // src/components/TextArea.tsx
 var TextArea = styled2("textarea", {
@@ -473,6 +480,7 @@ var TextArea = styled2("textarea", {
     color: "$gray400"
   }
 });
+TextArea.displayName = "TextArea";
 
 // src/components/TextInput/styles.ts
 var TextInputContainer = styled2("div", {
@@ -525,6 +533,7 @@ function TextInput(_a) {
     /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Input, __spreadValues({}, props))
   ] });
 }
+TextInput.displayName = "TextInput";
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
   Avatar,

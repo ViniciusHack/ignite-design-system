@@ -71,6 +71,7 @@ function Avatar2(props) {
     /* @__PURE__ */ jsx(AvatarFallback, { delayMs: 600, children: /* @__PURE__ */ jsx(User, {}) })
   ] });
 }
+Avatar2.displayName = "Avatar";
 
 // ../tokens/dist/index.mjs
 var colors = {
@@ -177,6 +178,7 @@ var Box = styled2("div", {
   backgroundColor: "$gray800",
   border: "1px solid $gray600"
 });
+Box.displayName = "Box";
 
 // src/components/Button.tsx
 var Button = styled2("button", {
@@ -250,6 +252,7 @@ var Button = styled2("button", {
     size: "md"
   }
 });
+Button.displayName = "Button";
 
 // src/components/Checkbox/index.tsx
 import { Check } from "phosphor-react";
@@ -310,6 +313,7 @@ import { jsx as jsx2 } from "react/jsx-runtime";
 function Checkbox2(props) {
   return /* @__PURE__ */ jsx2(CheckboxContainer, __spreadProps(__spreadValues({}, props), { children: /* @__PURE__ */ jsx2(CheckboxIndicator, { asChild: true, children: /* @__PURE__ */ jsx2(Check, { weight: "bold" }) }) }));
 }
+Checkbox2.displayName = "Checkbox";
 
 // src/components/Heading.tsx
 import { styled as styled3 } from "@stitches/react";
@@ -334,6 +338,7 @@ var Heading = styled3("h2", {
     size: "md"
   }
 });
+Heading.displayName = "Heading";
 
 // src/components/Text.tsx
 import { styled as styled4 } from "@stitches/react";
@@ -363,6 +368,7 @@ var Text = styled4("p", {
     size: "md"
   }
 });
+Text.displayName = "Text";
 
 // src/components/MultiStep/styles.ts
 var MultiStepContainer = styled2("div", {});
@@ -406,6 +412,7 @@ function MultiStep({ size, currentStep = 1 }) {
     }).map((step) => /* @__PURE__ */ jsx3(Step, { active: currentStep >= step }, step)) })
   ] });
 }
+MultiStep.displayName = "MultiStep";
 
 // src/components/TextArea.tsx
 var TextArea = styled2("textarea", {
@@ -432,6 +439,7 @@ var TextArea = styled2("textarea", {
     color: "$gray400"
   }
 });
+TextArea.displayName = "TextArea";
 
 // src/components/TextInput/styles.ts
 var TextInputContainer = styled2("div", {
@@ -484,6 +492,7 @@ function TextInput(_a) {
     /* @__PURE__ */ jsx4(Input, __spreadValues({}, props))
   ] });
 }
+TextInput.displayName = "TextInput";
 export {
   Avatar2 as Avatar,
   Box,
