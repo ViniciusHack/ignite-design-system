@@ -1,0 +1,2 @@
+import{A as t}from"./index.1a5a133b.js";import"./index.ef6b6b4b.js";import"./iframe.4097ac76.js";import"./index.5cbc68f3.js";import"./jsx-runtime.90d6e01d.js";const c={title:"Data display/Avatar",component:t,args:{src:"https://github.com/ViniciusHack.png",alt:"Vinicius Hack"},argTypes:{src:{control:{type:"text"}},alt:{control:{type:"text"}}}},p={},e={args:{src:void 0}},n=["Primary","WithFallback"];export{p as Primary,e as WithFallback,n as __namedExportsOrder,c as default};
+//# sourceMappingURL=Avatar.stories.606eaee0.js.map
